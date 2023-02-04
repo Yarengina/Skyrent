@@ -1,7 +1,7 @@
+import AppRoutes from '../routes'
+
 const App = () => {
-  return (
-    <p>Skyrent</p>
-  )
+  return <AppRoutes />
 }
 
 export default App
