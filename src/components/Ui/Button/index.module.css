@@ -14,9 +14,12 @@
   transition: all 0.25s ease;
 }
 
-.btn:hover,
-.btn:active {
+.btn:hover {
   background-color: #c5c2c2;
+}
+
+.btn:active {
+  background-color: #b7b5b5;
 }
 
 .disabled,
