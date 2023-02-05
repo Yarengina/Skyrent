@@ -1,19 +1,12 @@
+import CardImage from '../../components/CardImage'
 import classes from './index.module.css'
 
 const CardItem = ({ card }) => {
-  const { title, picture_url, country, city, description, price } = card
+  const { country, city, description, price } = card
 
   return (
     <div className={classes.cardWrapper}>
-      <div className={classes.imgWrapper}>
-        <img
-          className={classes.img}
-          width="100%"
-          height="100%"
-          src={picture_url}
-          alt={title}
-        />
-      </div>
+      <CardImage card={card} />
       <div>
         <h3 className={classes.location}>
           {country} → {city}
