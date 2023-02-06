@@ -2,8 +2,6 @@
   font-family: 'Roboto';
   src: local('Roboto'),
     url('../public/fonts/Roboto-Regular.ttf') format('truetype'),
-    url('../public/fonts/Roboto-Thin.ttf') format('truetype'),
-    url('../public/fonts/Roboto-Light.ttf') format('truetype'),
     url('../public/fonts/Roboto-Bold.ttf') format('truetype'),
     url('../public/fonts/Roboto-Medium.ttf') format('truetype');
   font-weight: 400;
@@ -23,7 +21,7 @@
 a,
 a:visited {
   text-decoration: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto';
   cursor: pointer;
 }
 
@@ -35,7 +33,7 @@ html,
 body {
   height: 100vh;
   width: 100vw;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto';
   color: #000;
   background-color: #fafafa;
 }
