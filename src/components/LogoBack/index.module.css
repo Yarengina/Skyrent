@@ -1,0 +1,10 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 34px;
+}
+
+.back {
+  margin-right: 24px;
+  cursor: pointer;
+}

@@ -19,7 +19,7 @@ const MainPage = () => {
     <PageWrapper>
       <nav className={classes.nav}>
         <Logo />
-        <Link to="/" className={classes.link}>
+        <Link to="/about" className={classes.link}>
           <p>О проекте</p>
         </Link>
       </nav>

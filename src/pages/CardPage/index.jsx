@@ -1,7 +1,6 @@
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import PageWrapper from '../../components/PageWrapper'
-import Logo from '../../components/Ui/Logo'
-import BackArrow from '../../components/Icons/BackArrow'
+import LogoBack from '../../components/LogoBack'
 import CardImage from '../../components/CardImage'
 import Button from '../../components/Ui/Button'
 import TickIcon from '../../components/Icons/TickIcon'
@@ -18,12 +17,7 @@ const CardPage = () => {
 
   return (
     <PageWrapper>
-      <div className={classes.nav}>
-        <Link to="/" className={classes.back}>
-          <BackArrow />
-        </Link>
-        <Logo />
-      </div>
+      <LogoBack />
       <h3 className={classes.location}>
         {country} → {city}
       </h3>

@@ -1,0 +1,59 @@
+.description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  opacity: 0.75;
+  margin: 0;
+  margin-bottom: 28px;
+}
+
+.title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 30px;
+  color: #000000;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.collaborator {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+  margin-bottom: 17px;
+  opacity: 0.75;
+}
+
+.name {
+  margin-left: 13px;
+}
+
+.link,
+.link:active {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.33;
+  color: #000000;
+  opacity: 0.5;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.link:hover {
+  opacity: 0.75;
+}
