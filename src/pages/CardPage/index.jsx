@@ -1,10 +1,12 @@
 import { useParams } from 'react-router-dom'
+import { useState } from 'react'
 import PageWrapper from '../../components/PageWrapper'
 import LogoBack from '../../components/LogoBack'
 import CardImage from '../../components/CardImage'
 import Button from '../../components/Ui/Button'
 import TickIcon from '../../components/Icons/TickIcon'
 import OffIcon from '../../components/Icons/OffIcon'
+import Contacts from '../../components/Contacts'
 import data from '../../data.json'
 import classes from './index.module.css'
 
@@ -14,6 +16,12 @@ const CardPage = () => {
   const card = data.find((card) => card.pk === cardPk)
 
   const { country, city, description, price, features_on, features_off } = card
+
+  const [contactsShown, setContactsShown] = useState(false)
+
+  const handleContactsToggle = () => {
+    setContactsShown(true)
+  }
 
   return (
     <PageWrapper>
@@ -39,7 +47,12 @@ const CardPage = () => {
           </li>
         ))}
       </ul>
-      <Button className={classes.btn}>Показать контактную информацию</Button>
+      {!contactsShown && (
+        <Button className={classes.btn} onClick={handleContactsToggle}>
+          Показать контактную информацию
+        </Button>
+      )}
+      {contactsShown && <Contacts card={card} />}
     </PageWrapper>
   )
 }
