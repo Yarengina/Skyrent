@@ -7,6 +7,7 @@ import Button from '../../components/Ui/Button'
 import TickIcon from '../../components/Icons/TickIcon'
 import OffIcon from '../../components/Icons/OffIcon'
 import Contacts from '../../components/Contacts'
+import ScrollToTop from '../../components/ScrollToTop'
 import data from '../../data.json'
 import classes from './index.module.css'
 
@@ -25,6 +26,7 @@ const CardPage = () => {
 
   return (
     <PageWrapper>
+      <ScrollToTop />
       <LogoBack />
       <h3 className={classes.location}>
         {country} → {city}

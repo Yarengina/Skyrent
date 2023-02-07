@@ -1,8 +1,12 @@
 .nav {
   display: flex;
-  justify-content: space-between;
+  gap: 134px;
   align-items: center;
-  margin-bottom: 45px;
+  padding: 43px 4px 10px 0px;
+  position: fixed;
+  top: 0;
+  background-color: #fafafa;
+  z-index: 999;
 }
 
 .link {
@@ -19,6 +23,7 @@
   color: rgba(0, 0, 0, 0.8);
   margin: 0;
   margin-bottom: 20px;
+  padding-top: 83px;
 }
 
 .subtitle {

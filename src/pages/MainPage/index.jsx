@@ -5,6 +5,7 @@ import Logo from '../../components/Ui/Logo'
 import Button from '../../components/Ui/Button'
 import Cards from '../../components/Cards'
 import Filter from '../../components/Filter'
+import ScrollToTop from '../../components/ScrollToTop'
 import data from '../../data.json'
 import classes from './index.module.css'
 
@@ -17,6 +18,7 @@ const MainPage = () => {
 
   return (
     <PageWrapper>
+      <ScrollToTop />
       <nav className={classes.nav}>
         <Logo />
         <Link to="/about" className={classes.link}>
@@ -31,7 +33,7 @@ const MainPage = () => {
         <Button onClick={handleFilterToggle}>Подобрать недвижимость</Button>
       )}
       {filterShown && <Filter />}
-      <Cards data={data} />
+      <Cards cards={data} />
     </PageWrapper>
   )
 }

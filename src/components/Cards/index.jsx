@@ -2,12 +2,12 @@ import { Link } from 'react-router-dom'
 import CardItem from '../CardItem'
 import classes from './index.module.css'
 
-const Cards = ({ data }) => {
+const Cards = ({ cards }) => {
   return (
     <>
-      {data.length !== 0 && (
+      {cards.length !== 0 && (
         <div className={classes.content}>
-          {data.map((card) => (
+          {cards.map((card) => (
             <Link
               to={`/card/${card.pk}`}
               key={card.pk}

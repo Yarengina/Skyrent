@@ -1,7 +1,11 @@
 .wrapper {
   display: flex;
   align-items: center;
-  margin-bottom: 34px;
+  position: fixed;
+  top: 0;
+  background-color: #fafafa;
+  z-index: 999;
+  padding: 43px 180px 10px 0px;
 }
 
 .back {
