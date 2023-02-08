@@ -42,7 +42,7 @@ const AboutPage = () => {
           <TickIcon />
           <span className={classes.name}>QA&nbsp;</span>
           <a
-            href="https://t.me/tyurnev"
+            href="https://github.com/tyurnev"
             target="_blank"
             rel="noreferrer"
             className={classes.link}

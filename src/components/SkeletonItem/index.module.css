@@ -1,0 +1,19 @@
+.wrapper {
+  background: #d9d9d9;
+  width: 100%;
+  height: 372px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.location {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 0.94;
+  color: #000000;
+  opacity: 0.5;
+  margin: 0;
+  margin-bottom: 22px;
+  padding-bottom: 50px;
+}

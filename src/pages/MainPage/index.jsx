@@ -43,7 +43,7 @@ const MainPage = () => {
       {!filterShown && (
         <Button onClick={handleFilterToggle}>Подобрать недвижимость</Button>
       )}
-      {filterShown && <Filter />}
+      {filterShown && <Filter data={cards} />}
       {isLoading && <Skeleton />}
       {!isLoading && isError && (
         <p>Произошла ошибка, не удалось загрузить данные.</p>
