@@ -1,1 +1,1 @@
-export const URL_API = 'http://localhost:8089/places/'
+export const URL_API = 'https://stayvacaybackend-production.up.railway.app/places/'
