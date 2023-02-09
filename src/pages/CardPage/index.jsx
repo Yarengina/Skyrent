@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+import { useQuery } from 'react-query'
 import PageWrapper from '../../components/PageWrapper'
 import LogoBack from '../../components/LogoBack'
 import CardImage from '../../components/CardImage'
@@ -15,33 +16,22 @@ import classes from './index.module.css'
 const CardPage = () => {
   const cardPk = useParams()?.id || ''
 
-  const [isLoading, setLoading] = useState(true)
-  const [isError, setError] = useState(false)
-  const [card, setCard] = useState('')
   const [contactsShown, setContactsShown] = useState(false)
 
-  useEffect(() => {
-    setLoading(true)
-    setError(false)
-    fetch(`${URL_API}${cardPk}`)
-      .then((response) => response.json())
-      .then((data) => {
-        setCard(data)
-        setLoading(false)
-      })
-      .catch((error) => {
-        setLoading(false)
-        setError(true)
-        console.log(error)
-      })
-  }, [cardPk])
+  const {
+    isLoading,
+    isError,
+    data: card,
+  } = useQuery('cardData', async () => {
+    const response = await fetch(`${URL_API}${cardPk}`)
+    return await response.json()
+  })
 
   if (isLoading) {
     return (
       <PageWrapper>
-        <ScrollToTop />
         <LogoBack />
-        <p className={classes.loading}>Загрузка...</p>
+        <p className={classes.message}>Загрузка...</p>
         <SkeletonItem />
       </PageWrapper>
     )
@@ -50,9 +40,10 @@ const CardPage = () => {
   if (isError) {
     return (
       <PageWrapper>
-        <ScrollToTop />
         <LogoBack />
-        <p>Произошла ошибка, не удалось загрузить данные.</p>
+        <p className={classes.message}>
+          Произошла ошибка, не удалось загрузить данные.
+        </p>
       </PageWrapper>
     )
   }
