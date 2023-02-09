@@ -37,3 +37,22 @@
   margin: 0;
   margin-bottom: 36px;
 }
+
+.message {
+  left: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: rgba(0, 0, 0, 0.8);
+  opacity: 0.75;
+  position: absolute;
+  top: 560px;
+}
+
+.error {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #b41515;
+  padding-top: 20px;
+}
