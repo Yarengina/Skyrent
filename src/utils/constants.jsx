@@ -1,2 +1,2 @@
 export const URL_API =
-  'https://stayvacaybackend-production.up.railway.app/places/'
+  'https://cors-stayvacay.up.railway.app/https://stayvacaybackend-production.up.railway.app/places/'
