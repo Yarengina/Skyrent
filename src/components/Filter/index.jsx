@@ -1,7 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from 'react'
 import { useQuery } from 'react-query'
-
 import Button from '../Ui/Button'
 import DownArrow from '../Icons/DownArrow'
 import getLocations from '../../utils/getLocations'
