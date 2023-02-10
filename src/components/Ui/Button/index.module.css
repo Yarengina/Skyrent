@@ -21,11 +21,3 @@
 .btn:active {
   background-color: #b7b5b5;
 }
-
-.disabled,
-.disabled:hover,
-.disabled:active {
-  background-color: #b7b5b5;
-  transform: none;
-  cursor: default;
-}
