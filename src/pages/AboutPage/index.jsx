@@ -14,7 +14,7 @@ const AboutPage = () => {
       </p>
       <h4 className={classes.title}>Над проектом работали:</h4>
       <ul className={classes.list}>
-        <li className={classes.collaborator}>
+        <li className={classes.member}>
           <TickIcon />
           <span className={classes.name}>Frontend&nbsp;</span>
           <a
@@ -26,7 +26,7 @@ const AboutPage = () => {
             @Lyubov_Yarengina
           </a>
         </li>
-        <li className={classes.collaborator}>
+        <li className={classes.member}>
           <TickIcon />
           <span className={classes.name}>Backend&nbsp;</span>
           <a
@@ -38,7 +38,7 @@ const AboutPage = () => {
             @zoromg
           </a>
         </li>
-        <li className={classes.collaborator}>
+        <li className={classes.member}>
           <TickIcon />
           <span className={classes.name}>QA&nbsp;</span>
           <a

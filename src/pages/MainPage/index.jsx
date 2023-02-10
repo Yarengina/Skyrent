@@ -26,6 +26,8 @@ const MainPage = () => {
   const [error, setError] = useState(false)
   const [loading, setLoading] = useState(false)
   const [filterShown, setFilterShown] = useState(false)
+  const [count, setCount] = useState('')
+  const [countShown, setCountShown] = useState(false)
 
   const {
     data: filteredData,
@@ -79,6 +81,8 @@ const MainPage = () => {
     setItems,
     setError,
     setLoading,
+    setCount,
+    setCountShown,
   }
 
   const handleFilterToggle = () => {
@@ -108,12 +112,10 @@ const MainPage = () => {
           Произошла ошибка, не удалось загрузить данные.
         </p>
       )}
-      {items && <Cards cards={items} />}
-      {!loading && !error && items.length === 0 && (
-        <p className={classes.message}>
-          Не найдено. Попробуйте изменить параметры.
-        </p>
+      {items && countShown && filterShown && (
+        <p className={classes.count}>Найдено: {count}</p>
       )}
+      {items && <Cards cards={items} />}
     </PageWrapper>
   )
 }
