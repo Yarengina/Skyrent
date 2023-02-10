@@ -82,6 +82,10 @@
   width: 302px;
 }
 
+.btnFetching {
+  background: #b7b5b5;
+}
+
 .selectWrapper {
   position: absolute;
   top: 100px;

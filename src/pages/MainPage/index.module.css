@@ -16,6 +16,10 @@
   color: #727883;
 }
 
+.link:hover {
+  color: #000000;
+}
+
 .title {
   font-weight: 700;
   font-size: 34px;
@@ -55,4 +59,10 @@
   line-height: 20px;
   color: #b41515;
   padding-top: 20px;
+}
+
+.count {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 30px;
 }

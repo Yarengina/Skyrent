@@ -27,7 +27,7 @@
   margin-bottom: 30px;
 }
 
-.collaborator {
+.member {
   display: flex;
   align-items: center;
   font-style: normal;
@@ -43,18 +43,16 @@
   margin-left: 13px;
 }
 
-.link,
-.link:active {
+.link {
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.33;
-  color: #000000;
-  opacity: 0.5;
+  color: #727883;
   text-decoration: none;
   transition: color 0.15s;
 }
 
 .link:hover {
-  opacity: 0.75;
+  color: #000000;
 }

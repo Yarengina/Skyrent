@@ -8,11 +8,19 @@ import { URL_API } from '../../utils/constants'
 import classes from './index.module.css'
 import cn from 'classnames'
 
-const Filter = ({ data, setItems, setError, setLoading }) => {
+const Filter = ({
+  data,
+  setItems,
+  setError,
+  setLoading,
+  setCount,
+  setCountShown,
+}) => {
   const [minPrice, setMinPrice] = useState('')
   const [maxPrice, setMaxPrice] = useState('')
   const [selectShown, setSelectShown] = useState(false)
   const [selectedLocation, setSelectedLocation] = useState('')
+  const [withoutFilterShown, setWithoutFilterShown] = useState(false)
 
   const handleMinPriceChange = ({ target: { value } }) => {
     if (/^\d*$/.test(value)) {
@@ -33,6 +41,13 @@ const Filter = ({ data, setItems, setError, setLoading }) => {
   const handleSelectLocation = (location) => {
     setSelectedLocation(location === selectedLocation ? '' : location)
     setSelectShown((prev) => !prev)
+    setWithoutFilterShown(false)
+  }
+
+  const handleWithoutFilter = () => {
+    setSelectedLocation('')
+    setSelectShown((prev) => !prev)
+    setWithoutFilterShown(true)
   }
 
   const handleSearch = (e) => {
@@ -63,6 +78,8 @@ const Filter = ({ data, setItems, setError, setLoading }) => {
   useEffect(() => {
     if (filteredData) {
       filteredData.length ? setItems(filteredData) : setItems([])
+      setCount(filteredData.length)
+      setCountShown(true)
       return
     }
   }, [filteredData])
@@ -80,7 +97,10 @@ const Filter = ({ data, setItems, setError, setLoading }) => {
           type="button"
           onClick={handleSelect}
         >
-          <span>{selectedLocation || 'Страна и город'}</span>
+          {!withoutFilterShown && (
+            <span>{selectedLocation || 'Страна и город'}</span>
+          )}
+          {withoutFilterShown && <span>Без фильтра</span>}
           <DownArrow />
         </button>
         <div className={classes.inputsWrapper}>
@@ -97,11 +117,21 @@ const Filter = ({ data, setItems, setError, setLoading }) => {
             value={maxPrice}
           />
         </div>
-        <Button className={classes.btnSubmit} type="submit">
-          Подобрать
-        </Button>
+        {!isFetching && (
+          <Button className={classes.btnSubmit} type="submit">
+            Подобрать
+          </Button>
+        )}
+        {isFetching && (
+          <Button className={cn(classes.btnSubmit, classes.btnFetching)}>
+            Выполняем поиск ...
+          </Button>
+        )}
         {selectShown && (
           <div className={classes.selectWrapper}>
+            <div onClick={() => handleWithoutFilter()} className={classes.item}>
+              <span className={classes.itemText}>Без фильтра</span>
+            </div>
             {getLocations(data).map((location) => {
               return (
                 <div
