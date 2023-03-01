@@ -1,7 +1,7 @@
 # StayVacay
 Проект RAID – командный роудмап
 
-Приложение опубликовано, используя сервис Netlify. Адрес [здесь.](https://splendid-youtiao-f3f353.netlify.app/)
+Приложение опубликовано, используя сервис Netlify. Адрес [здесь.](https://skyrent-app.netlify.app/)
 
 ## Наша команда:
 
