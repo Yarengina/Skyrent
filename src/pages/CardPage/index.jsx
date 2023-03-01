@@ -66,13 +66,13 @@ const CardPage = () => {
       <CardImage card={card} />
       <h4 className={classes.title}>Что есть внутри?</h4>
       <ul className={classes.list}>
-        {features_on.map((item) => (
+        {features_on.split(', ').map((item) => (
           <li className={classes.featureOn} key={item}>
             <TickIcon />
             {item}
           </li>
         ))}
-        {features_off.map((item) => (
+        {features_off.split(', ').map((item) => (
           <li className={classes.featureOff} key={item}>
             <OffIcon />
             {item}
